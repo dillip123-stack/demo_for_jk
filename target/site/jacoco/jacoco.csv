@@ -1,0 +1,8 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+document,com.demo.document.mapper,Mapper,3,16,0,0,1,7,1,1,1,1
+document,com.demo.document.controller,DocumentController,0,35,0,0,0,8,0,4,0,4
+document,com.demo.document.service,DocumentService,17,109,3,5,3,26,2,7,0,5
+document,com.demo.document,DocumentApplication,5,3,0,0,2,1,1,1,1,1
+document,com.demo.document.dto,DocumentResponse,0,66,0,0,0,28,0,14,0,14
+document,com.demo.document.config,SwaggerConfig,0,43,0,0,0,16,0,2,0,2
+document,com.demo.document.entity,Document,0,66,0,0,0,28,0,14,0,14

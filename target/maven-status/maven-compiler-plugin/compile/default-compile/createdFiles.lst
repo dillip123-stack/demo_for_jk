@@ -1,0 +1,8 @@
+com\demo\document\mapper\Mapper.class
+com\demo\document\config\SwaggerConfig.class
+com\demo\document\dto\DocumentResponse.class
+com\demo\document\controller\DocumentController.class
+com\demo\document\DocumentApplication.class
+com\demo\document\service\DocumentService.class
+com\demo\document\entity\Document.class
+com\demo\document\dao\DocumentRepository.class
