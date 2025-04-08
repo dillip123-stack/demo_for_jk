@@ -43,7 +43,26 @@ Description: Upload and ingest a document with metadata (title, author, type).
 
 #### case1: upload docx file
 
-curl: curl --location 'http://localhost:8080/documents/ingest?title=dillip&author=deepak&type=docx' \
+Request curl: 
+curl --location 'http://localhost:8080/documents/ingest?title=dillip&author=deepak&type=docx' \
+--header 'accept: */*' \
+--header 'Content-Type: application/json' \
+--form 'file=@"postman-cloud:///1f012efb-cb0e-4a40-9fd7-59ce7a45aa33"'
+
+Response:
+{
+"id": 23,
+"title": "dillip",
+"author": "deepak",
+"type": "docx",
+"content": "Dillip Giri | Software Engineer (Java Backend Developer)\nsdm.dillip@gmail.com                                                                  +91 6371684110\nSummary \nResults-driven Java Developer with over 4 years of experience in designing, developing, and implementing scalable enterprise applications. Proficient in Core Java, Spring Boot, Microservices, and Hibernate, with expertise in database-driven applications using MySQL and PostgreSQL. Adept at Agile methodologies, batch processing, and version control with Git. Strong problem-solving skills with a focus on performance optimization and maintainable code. Passionate about delivering innovative solutions across Financial, E-commerce, Digital Media, and Healthcare domains while collaborating in dynamic environments.\nEducation \nBachelors of Technology from Biju Pattanaik University of Technology, Rourkela, Odisha (06/2013 - 07/2017) with 8.0 CGPA.\nIntermediate of Science from RIST, Basta, Balasore, Odisha (05/2011 - 05/2013) with 66%.\nMatriculation from B. C. High School, Kasafal, Balasore, Odisha (05/2010 – 05/2011) with 56%.\nWork Experience\nSoftware Engineer – Aspida Technologies                                                                                                            03/2023 - 01/2025\nImplement innovative strategies, driving a 30% increase in client satisfaction through enhanced service delivery.\nDeveloped and managed a high-performance database, improving data retrieval time.\nWrote comprehensive unit test cases for key functionalities, boosting overall application reliability.\nCreated detailed API documentation that improved integration efficiency, reducing support requests by 25%.\nAlong with development, I have contributed to verification and validation for client UAT support.\n\nSoftware Engineer - Verve Digital Technologies Pvt. Ltd.                                                                                   01/2021 - 02/2023\nLeveraged expertise to develop innovative solutions, resulting increase in project efficiency.\nDeveloped a scalable application using Spring Boot Services, reducing deployment time and enhancing system performance.\nWrote comprehensive unit test cases for key functionalities, boosting overall application reliability.\nIdentified and fixed major bugs, leading to decrease in user-reported issues within one quarter.\n\n.Skills : \nJava, Spring boot, Microservices, MySQL, PostgreSQL, MongoDB, click house DB, Kafka, Junit, REST API, JSP, Servlet, Swagger, Jacoco, SonarQube, Hibernate, JPA, JDBC template, Agile methodologies\nTools: Eclipse, IntelliJ, STS, Postman, JIRA, Share point, Bit Bucket, Git, Pg Admin, MySQL Workbench, dbeaver \nProjects :\nMatter Web Site (Mar 2023 – Dec 2024)\nEnabled registration, update profile and login functionality, increasing user sign-ups.\nFacilitated prebooking for 40,000 users, increasing customer engagement by 25% and enhancing overall user satisfaction.\nImplemented a user-friendly booking system that allowed registered users to schedule test rides effortlessly.\nFacilitated registration for dealerships, enhancing user engagement and expanding market reach significantly.\nMatter Companion APP (Mar 2023 – Dec 2024)\nDeveloped APIs for user-friendly application allowing bike owners to access ride details, enhancing customer engagement.\nFacilitated a feature enabling users to track bike locations, achieving a satisfaction rate in user feedback surveys.\nEnabled remote lock and unlock capabilities, enhancing security response.\nImplemented vacation mode feature, resulting in reduction in user inquiries during peak holiday seasons.\nMatter Sales APP (July 2023 - Dec 2024)\nStreamlined dealer-side administration processes, reducing administrative errors.\nFacilitated access for dealer-side employees to track engagements, resulting in increase in customer interactions.\nHospital Management System (Apr 2022 - Feb 2023)\nStreamlined patient notes and transaction management, enhancing data accessibility for healthcare providers.\nImplemented a patient scheduling system that reduced appointment wait times, enhancing overall patient satisfaction.\nDeveloped a versatile clinic management system, enabling usage by individual clinics or as a centralized management hub.\nEngineered a multi-module healthcare application comprising Patient, Doctor, Medicos, Operation, Billing and Test.\nEmployment Website (Jan 2021 - Feb 2022)\nFacilitated job posting for recruiters, resulting in a 30% increase in candidate applications within six months.\nImplemented features for CV uploads, education details, and skills, attracting more recruiters to candidate profiles.\nDeveloped a project comprising three modules: Administration, Recruiter, and Candidate, enhancing workflow efficiency.\n\n\n",
+"createdDate": "2025-04-08"
+}
+
+#### case2: Upload pdf file
+
+Request curl: 
+curl --location 'http://localhost:8080/documents/ingest?title=dillip&author=deepak&type=pdf' \
 --header 'accept: */*' \
 --header 'Content-Type: application/json' \
 --form 'file=@"postman-cloud:///1f012efb-cb0e-4a40-9fd7-59ce7a45aa33"'
@@ -99,61 +118,22 @@ efficiency.\n\n\n",
 
 #### case2: Upload pdf file
 
-curl:
-curl: curl --location 'http://localhost:8080/documents/ingest?title=dillip&author=deepak&type=pdf' \
+Request curl:
+curl --location 'http://localhost:8080/documents/ingest?title=dillip&author=deepak&type=txt' \
 --header 'accept: */*' \
 --header 'Content-Type: application/json' \
---form 'file=@"postman-cloud:///1f012efb-cb0e-4a40-9fd7-59ce7a45aa33"'
+--form 'file=@"/C:/Users/dilli/OneDrive/文档/new 9.txt"'
 
-response:
 Response:
 {
-"id": 23,
+"id": 24,
 "title": "dillip",
 "author": "deepak",
-"type": "docx",
-"content": "Dillip Giri | Software Engineer (Java Backend Developer)\nsdm.dillip@gmail.com
-+91 6371684110\nSummary \nResults-driven Java Developer with over 4 years of experience in designing, developing, and
-implementing scalable enterprise applications. Proficient in Core Java, Spring Boot, Microservices, and Hibernate, with
-expertise in database-driven applications using MySQL and PostgreSQL. Adept at Agile methodologies, batch processing,
-and version control with Git. Strong problem-solving skills with a focus on performance optimization and maintainable
-code. Passionate about delivering innovative solutions across Financial, E-commerce, Digital Media, and Healthcare
-domains while collaborating in dynamic environments.\nEducation \nBachelors of Technology from Biju Pattanaik University
-of Technology, Rourkela, Odisha (06/2013 - 07/2017) with 8.0 CGPA.\nIntermediate of Science from RIST, Basta, Balasore,
-Odisha (05/2011 - 05/2013) with 66%.\nMatriculation from B. C. High School, Kasafal, Balasore, Odisha (05/2010 –
-05/2011) with 56%.\nWork Experience\nSoftware Engineer – Aspida Technologies 03/2023 - 01/2025\nImplement innovative
-strategies, driving a 30% increase in client satisfaction through enhanced service delivery.\nDeveloped and managed a
-high-performance database, improving data retrieval time.\nWrote comprehensive unit test cases for key functionalities,
-boosting overall application reliability.\nCreated detailed API documentation that improved integration efficiency,
-reducing support requests by 25%.\nAlong with development, I have contributed to verification and validation for client
-UAT support.\n\nSoftware Engineer - Verve Digital Technologies Pvt. Ltd. 01/2021 - 02/2023\nLeveraged expertise to
-develop innovative solutions, resulting increase in project efficiency.\nDeveloped a scalable application using Spring
-Boot Services, reducing deployment time and enhancing system performance.\nWrote comprehensive unit test cases for key
-functionalities, boosting overall application reliability.\nIdentified and fixed major bugs, leading to decrease in
-user-reported issues within one quarter.\n\n.Skills : \nJava, Spring boot, Microservices, MySQL, PostgreSQL, MongoDB,
-click house DB, Kafka, Junit, REST API, JSP, Servlet, Swagger, Jacoco, SonarQube, Hibernate, JPA, JDBC template, Agile
-methodologies\nTools: Eclipse, IntelliJ, STS, Postman, JIRA, Share point, Bit Bucket, Git, Pg Admin, MySQL Workbench,
-dbeaver \nProjects :\nMatter Web Site (Mar 2023 – Dec 2024)\nEnabled registration, update profile and login
-functionality, increasing user sign-ups.\nFacilitated prebooking for 40,000 users, increasing customer engagement by 25%
-and enhancing overall user satisfaction.\nImplemented a user-friendly booking system that allowed registered users to
-schedule test rides effortlessly.\nFacilitated registration for dealerships, enhancing user engagement and expanding
-market reach significantly.\nMatter Companion APP (Mar 2023 – Dec 2024)\nDeveloped APIs for user-friendly application
-allowing bike owners to access ride details, enhancing customer engagement.\nFacilitated a feature enabling users to
-track bike locations, achieving a satisfaction rate in user feedback surveys.\nEnabled remote lock and unlock
-capabilities, enhancing security response.\nImplemented vacation mode feature, resulting in reduction in user inquiries
-during peak holiday seasons.\nMatter Sales APP (July 2023 - Dec 2024)\nStreamlined dealer-side administration processes,
-reducing administrative errors.\nFacilitated access for dealer-side employees to track engagements, resulting in
-increase in customer interactions.\nHospital Management System (Apr 2022 - Feb 2023)\nStreamlined patient notes and
-transaction management, enhancing data accessibility for healthcare providers.\nImplemented a patient scheduling system
-that reduced appointment wait times, enhancing overall patient satisfaction.\nDeveloped a versatile clinic management
-system, enabling usage by individual clinics or as a centralized management hub.\nEngineered a multi-module healthcare
-application comprising Patient, Doctor, Medicos, Operation, Billing and Test.\nEmployment Website (Jan 2021 - Feb 2022)
-\nFacilitated job posting for recruiters, resulting in a 30% increase in candidate applications within six
-months.\nImplemented features for CV uploads, education details, and skills, attracting more recruiters to candidate
-profiles.\nDeveloped a project comprising three modules: Administration, Recruiter, and Candidate, enhancing workflow
-efficiency.\n\n\n",
-"createdDate": "2025-04-07"
+"type": "txt",
+"content": "Hello, my name is Dillip Giri, and I am a results-driven Java Developer with over four years of experience in designing and developing \r\nscalable enterprise applications. I specialize in Core Java, Spring Boot, Microservices, and Hibernate, with a strong background in \r\ndatabase-driven applications using MySQL and PostgreSQL. Currently, I am working at Aspida Technologies, where I have contributed to\r\n enhancing service delivery, improving system performance, and streamlining API integrations.\r\n\r\nThroughout my career, I have worked on various impactful projects. For instance, in the Matter Website, I developed key functionalities\r\n like user registration, profile updates, and dealership registrations, improving customer engagement. In the Matter Companion App, \r\n I built features such as ride tracking, remote locking, and vacation mode, enhancing user experience and security. Additionally, \r\n I worked on the Matter Sales App, optimizing dealer-side processes to improve customer interactions.\r\n\r\nI am passionate about building efficient, maintainable, and scalable applications, and\r\n I continuously strive to improve my skills while contributing to high-quality software solutions.\r\n \r\n \r\n Roles and Responsibility\r\n \r\n Designed and developed scalable, high-performance applications using Java, Spring Boot, and Microservices.\r\n Worked with MySQL, PostgreSQL, MongoDB, and ClickHouse DB to ensure efficient data storage and retrieval.\r\n Created RESTful APIs, integrated third-party APIs, and improved system responsiveness.\r\n Enhanced application performance by reducing response times and optimizing database queries.\r\n Wrote unit test cases (JUnit, Jacoco, SonarQube), ensuring high application reliability.\r\n Executed manual deployments across multiple environments, ensuring zero downtime.\r\n Worked in Agile environments using JIRA, collaborating with cross-functional teams for project execution.\r\n Implemented secure authentication and authorization mechanisms.\r\n Assisted in User Acceptance Testing (UAT), providing validation and verification support.",
+"createdDate": "2025-04-08"
 }
+
 
 ### 2. Keyword-Based Document Q&A
 
