@@ -3,6 +3,7 @@ package com.demo.document.controller;
 import com.demo.document.dto.DocumentResponse;
 import com.demo.document.service.DocumentService;
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -46,11 +47,11 @@ public class DocumentController {
     @Operation(summary = "Filtering the document")
     @GetMapping("/filter")
     public ResponseEntity<Page<DocumentResponse>> filter(
-            @RequestParam String author,
-            @RequestParam String type,
+            @RequestParam(defaultValue = "") String author,
+            @RequestParam(defaultValue = "") String type,
             @RequestParam(defaultValue = "0") int page,
             @RequestParam(defaultValue = "10") int size,
-            @RequestParam String sortBy) {
+            @RequestParam(defaultValue = "title") @Parameter(name = "sortBy", description = "Must be title or author or type")String sortBy) {
         return ResponseEntity.ok(documentService.filter(author, type, page, size, sortBy));
     }
 }
